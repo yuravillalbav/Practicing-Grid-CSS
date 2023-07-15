@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap");
+
+body {
+  display: grid;
+  background-color: #dce8f4;
+  color: white;
+  height: 100vh;
+  place-items: center;
+  font-size: 13px;
+}
+
+.container {
+  height: 85vh;
+  width: 80vw;
+  display: grid;
+  box-sizing: border-box;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 270px 270px;
+  grid-template-areas:
+    "square-1 square-1 square-2 square-5"
+    "square-3 square-4 square-4 square-5";
+}
+
+.square {
+  width: auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.square-user {
+  display: inline-block;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.square-user > .name {
+  font-size: 15px;
+}
+
+.square-user > .title {
+  opacity: 50%;
+  position: relative;
+  bottom: 12px;
+  font-size: 15px;
+}
+
+.square .square-heading {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 20px;
+  margin: 10px;
+  font-weight: bolder;
+}
+
+.square .square-profile {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  opacity: 70%;
+  padding-bottom: 5px;
+}
+
+.square-1 {
+  grid-area: square-1;
+  background-color: hsl(263, 55%, 52%);
+}
+
+.square-2 {
+  grid-area: square-2;
+  background-color: hsl(217, 19%, 35%);
+}
+
+.square-3 {
+  grid-area: square-3;
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+}
+
+.square-4 {
+  grid-area: square-4;
+  background-color: hsl(219, 29%, 14%);
+}
+
+.square-5 {
+  grid-area: square-5;
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+}
+
+img {
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+@media (max-width: 1250px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
